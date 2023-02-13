@@ -1,1 +1,16 @@
-<p>departmentdetail works!</p>
+<h2>Department Details</h2>
+<button (click) = "showDetail()">Show Detail</button>
+
+<div>
+  <div *ngFor="let depart of departments; index as i"
+  style="display: flex; border-bottom: 1px solid #000; padding: 5px;">
+
+    <p>
+      {{i+1}}
+    </p>
+
+    <p>{{depart.name}}</p>
+    <p>{{depart.page}}</p>
+
+  </div>
+</div>
