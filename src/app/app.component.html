@@ -22,13 +22,46 @@
 <body>
   <div class="container">
 
+    <app-sidebar style="width: 20%; background-color: rgb(152, 152, 212);">
 
-    <div>
+    </app-sidebar>
 
 
-      <app-content>
+    <div style="width: 80%">
+      <h1>App Component</h1>
 
-      </app-content>
+      <div style="width: 100%; background: #c5c5c5;">
+
+        <!-- dữ liệu của processData được binding vào parentData -->
+        <app-content [parentData] = "processData">
+
+        </app-content>
+      </div>
+
+
+      <div style="width: 100%; background-color: aquamarine;">
+        <app-form [parentData] = "inputdatafromForm" (childEvent) = "dataFromChild=$event"></app-form>
+
+
+        <div *ngIf="dataFromChild">
+          <p>Data from Child-Component form:
+            {{ dataFromChild | json }}
+          </p>
+        </div>
+
+      </div>
+
+
+      <div style="width: 100%; background-color: red;">
+        <h2>Department List & Detail</h2>
+
+        <app-departmentlist></app-departmentlist>
+
+        <app-departmentdetail></app-departmentdetail>
+
+      </div>
+
+
 
     </div>
 

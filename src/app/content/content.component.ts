@@ -1,79 +1,49 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  Input
+ } from '@angular/core';
 
 @Component({
   selector: 'app-content',
-  // templateUrl: './content.component.html',
+  templateUrl: './content.component.html',
   styleUrls: ['./content.component.css'],
 
-  template: `
-    <h2>Product: {{productName}}</h2>
-
-    <h2>{{"Product Price: " + productPrice}}</h2>
-
-    <h2>{{productCategory.toUpperCase()}}</h2>
-
-    <h3>{{ test() }}</h3>
-
-    <button (click) = "onClick($event)" >
-      Click me
-
-    </button>
-
-    <hr>
-
-    <!-- làm form với 2 way binding -->
-    <div>
-      <label for="">Enter student 1: </label>
-      <input type="text" [(ngModel)] = "st1">
-
-      <label for="">Enter student 2: </label>
-      <input type="text" [(ngModel)] = "st2">
-
-      <label for="">Enter student 3: </label>
-      <input type="text" [(ngModel)] = "st3">
-
-
-      <!-- <button (click)="saveData()">
-        Save data
-      </button> -->
-
-      <button (click)="resetData()">
-        Reset data
-      </button>
-
-      <p>Full Name student 1: <span>{{st1}}</span></p>
-      <p>Full Name student 2: <span>{{st2}}</span></p>
-      <p>Full Name student 3: <span>{{st3}}</span></p>
-    </div>
-
-
-  `
 })
 export class ContentComponent {
 
-
-  productName = "TITLE BOOK";
-  productPrice = 5.6;
-  productCategory = "Hàng tiêu dùng";
-
-
-  onClick(event: any ) {
-    this.productName = "Changed title book"
+  display = true;
+  changeView() {
+    this.display = !this.display;
 
   }
 
-  test() {
-    console.log("Hello");
-  }
+  product_ngFor = [
+    {
+      productName: "iPhone Xs Max 256GB (Likenew)",
+      productPrice: 8990000,
+      productImage: "https://didongviet.vn/pub/media/catalog/product//i/p/iphone-xs-max-256gb-mau-gold-didongviet.jpg"
+    },
+    {
+      productName: "iPhone 14 Pro Max 512GB Chính Hãng",
+      productPrice: 34990000,
+      productImage: "https://didongviet.vn/pub/media/catalog/product//i/p/iphone-14-pro-max-mau-xam-den-didongviet_2.jpg"
+    },
+    {
+      productName: "iPhone 13 Pro 512GB (Likenew)",
+      productPrice: 21990000,
+      productImage: "https://didongviet.vn/pub/media/catalog/product//i/p/iphone-13-pro-max-256gb-xanh-duong-didongviet_1_1.jpg"
+    },
+    {
+      productName: "iPhone 12 64GB (Likenew)",
+      productPrice: 10990000,
+      productImage: "https://didongviet.vn/pub/media/catalog/product//i/p/iphone-12-mau-green-didongviet_2.jpg"
+    },
+  ];
 
-  st1 ="";
-  st2 ="";
-  st3 ="";
+  //khai báo biến thuộc tính để nhận dữ liệu, kiểu dữ liệu any
+  // @Input() public parentData: any
 
-  resetData() {
-    this.st1 = "";
-    this.st2 = "";
-    this.st3 = "";
-  }
+  // cách khai báo thứ hai
+  @Input("parentData") public data:any
 
 }

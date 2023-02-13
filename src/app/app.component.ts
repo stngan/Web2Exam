@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Lesson';
+
+  processData = "gửi data từ App compo cho content compo";
+
+  dataFromChild: any;
+  inputdatafromForm = "đây là input từ người dùng"
+
+
 }
