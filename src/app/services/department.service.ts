@@ -192,4 +192,6 @@ export class DepartmentService {
       },
     ];
   }
+
+  url = "https://jsonplaceholder.typicode.com/todos";
 }
