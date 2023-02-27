@@ -9,7 +9,7 @@ import { DepartmentService } from '../services/department.service';
 export class DepartmentdetailComponent{
   departments: any;
   constructor(private _s: DepartmentService) {
-
+    // this.departments = this._s.getDepartmentList();
   }
 
   // ngOnInit(): void {

@@ -1,0 +1,33 @@
+<div>
+  <div style="display: flex; flex-direction: row;">
+    <p>Product ID</p>
+    <p>Product Name</p>
+    <p>Product Price</p>
+  </div>
+
+  <div *ngFor="let cate of database"
+    style="background-color: #e7e7e7; margin-right: 20px;  " >
+    <p>
+      {{cate.CateID}} - {{cate.CateName}}
+    </p>
+
+
+    <div *ngFor="let p of cate.Products" style="background-color: #c0c0c0; margin-right: 50px;" >
+
+      <div>
+        <p>
+          {{p.ProductID}}
+        </p>
+        <p>
+          {{p.ProductName}}
+        </p>
+        <p>
+          {{p.Price}}
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
