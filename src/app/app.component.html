@@ -14,71 +14,44 @@
 
     }
     .container {
+      color: #000;
       display: flex;
-      height: 100vh;
     }
   </style>
 </head>
 <body>
+
   <div class="container">
 
-    <app-sidebar style="width: 20%; background-color: rgb(152, 152, 212);">
+    <div style="width: 50%;">
+      <h2>Câu 3 - My Component done</h2>
+      <app-my-component></app-my-component>
 
-    </app-sidebar>
+      <h2>Câu 4 - Binding Property done</h2>
+      <app-binding-property></app-binding-property>
 
+      <h2>Câu 5 - Binding Class done</h2>
+      <!-- <app-binding-class></app-binding-class> -->
+      <div app-binding-class></div>
+    </div>
 
-    <div style="width: 80%">
-      <h1>App Component</h1>
-
-      <div style="background-color: bisque;">
-        <h2>Routing - Dashboard - thầy Thanh</h2>
-
-        <a routerLink="/routing-dashboard" routerLinkActive="active">Routing to Dashboard</a>
-        <!-- <app-routing-dashboard></app-routing-dashboard> -->
-
-        <h2>2 Vòng lặp lồng nhau - List catalog - thầy Thanh</h2>
-        <app-list-catalog></app-list-catalog>
+    <div>
 
 
-      </div>
+      <h2>Câu 6 - Binding Style</h2>
+      <app-binding-style></app-binding-style>
 
+      <h2>Câu 7 - Binding Event done</h2>
+      <div app-binding-event></div>
 
+      <h2>Câu 8 - Binding 2 Ways</h2>
+      <app-binding2way></app-binding2way>
 
-
-      <div style="width: 100%; background: #c5c5c5;">
-
-        <!-- dữ liệu của processData được binding vào parentData -->
-        <app-content [parentData] = "processData">
-
-        </app-content>
-      </div>
-
-
-      <div style="width: 100%; background-color: aquamarine;">
-        <app-form [parentData] = "inputdatafromForm" (childEvent) = "dataFromChild=$event"></app-form>
-
-
-        <div *ngIf="dataFromChild">
-          <p>Data from Child-Component form:
-            {{ dataFromChild | json }}
-          </p>
-        </div>
-
-      </div>
-
-
-      <div style="width: 100%; background-color: rgb(224, 152, 152);">
-        <h2>Department List & Detail</h2>
-
-        <app-departmentlist></app-departmentlist>
-
-        <app-departmentdetail></app-departmentdetail>
-
-      </div>
-
-
+      <h2>Câu 9 - Phương trình bậc 2</h2>
+      <app-ptbh></app-ptbh>
 
     </div>
+
 
   </div>
 

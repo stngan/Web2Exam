@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContentComponent } from './content.component';
+import { BindingClassComponent } from './binding-class.component';
 
-describe('ContentComponent', () => {
-  let component: ContentComponent;
-  let fixture: ComponentFixture<ContentComponent>;
+describe('BindingClassComponent', () => {
+  let component: BindingClassComponent;
+  let fixture: ComponentFixture<BindingClassComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ContentComponent ]
+      declarations: [ BindingClassComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ContentComponent);
+    fixture = TestBed.createComponent(BindingClassComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

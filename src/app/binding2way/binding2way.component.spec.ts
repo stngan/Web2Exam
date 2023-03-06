@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SidebarComponent } from './sidebar.component';
+import { Binding2wayComponent } from './binding2way.component';
 
-describe('SidebarComponent', () => {
-  let component: SidebarComponent;
-  let fixture: ComponentFixture<SidebarComponent>;
+describe('Binding2wayComponent', () => {
+  let component: Binding2wayComponent;
+  let fixture: ComponentFixture<Binding2wayComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SidebarComponent ]
+      declarations: [ Binding2wayComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SidebarComponent);
+    fixture = TestBed.createComponent(Binding2wayComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

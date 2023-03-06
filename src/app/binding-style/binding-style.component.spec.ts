@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListCatalogComponent } from './list-catalog.component';
+import { BindingStyleComponent } from './binding-style.component';
 
-describe('ListCatalogComponent', () => {
-  let component: ListCatalogComponent;
-  let fixture: ComponentFixture<ListCatalogComponent>;
+describe('BindingStyleComponent', () => {
+  let component: BindingStyleComponent;
+  let fixture: ComponentFixture<BindingStyleComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListCatalogComponent ]
+      declarations: [ BindingStyleComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ListCatalogComponent);
+    fixture = TestBed.createComponent(BindingStyleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

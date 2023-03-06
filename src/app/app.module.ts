@@ -3,27 +3,27 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule, RoutingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { ContentComponent } from './content/content.component';
-import { FormComponent } from './form/form.component';
 
-import { DepartmentlistComponent } from './departmentlist/departmentlist.component';
-import { DepartmentdetailComponent } from './departmentdetail/departmentdetail.component';
-import { RoutingDashboardComponent } from './routing-dashboard/routing-dashboard.component';
-import { ListCatalogComponent } from './list-catalog/list-catalog.component';
+import { MyComponentComponent } from './my-component/my-component.component';
+import { BindingPropertyComponent } from './binding-property/binding-property.component';
+import { BindingClassComponent } from './binding-class/binding-class.component';
+import { BindingStyleComponent } from './binding-style/binding-style.component';
+import { BindingEventComponent } from './binding-event/binding-event.component';
+import { Binding2wayComponent } from './binding2way/binding2way.component';
+import { PTBHComponent } from './ptbh/ptbh.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoutingComponents,
 
-    SidebarComponent,
-    ContentComponent,
-    FormComponent,
-    DepartmentlistComponent,
-    DepartmentdetailComponent,
-    RoutingDashboardComponent,
-    ListCatalogComponent
+    MyComponentComponent,
+    BindingPropertyComponent,
+    BindingClassComponent,
+    BindingStyleComponent,
+    BindingEventComponent,
+    Binding2wayComponent,
+    PTBHComponent
   ],
   imports: [
     BrowserModule,
