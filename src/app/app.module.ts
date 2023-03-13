@@ -11,6 +11,8 @@ import { BindingStyleComponent } from './binding-style/binding-style.component';
 import { BindingEventComponent } from './binding-event/binding-event.component';
 import { Binding2wayComponent } from './binding2way/binding2way.component';
 import { PTBHComponent } from './ptbh/ptbh.component';
+import { LoginScreenComponent } from './login-screen/login-screen.component';
+import { FormBuilder, FormsModule, FormGroup } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,11 +25,16 @@ import { PTBHComponent } from './ptbh/ptbh.component';
     BindingStyleComponent,
     BindingEventComponent,
     Binding2wayComponent,
-    PTBHComponent
+    PTBHComponent,
+    LoginScreenComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    FormBuilder,
+    FormGroup,
+
 
   ],
   providers: [],
