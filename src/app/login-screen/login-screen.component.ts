@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 
 export class LoginScreenComponent {
+  inputForm: FormGroup;
+
   constructor (
     public mail: string = "",
     public pass: string = ""
@@ -16,6 +18,6 @@ export class LoginScreenComponent {
   }
 
   formSubmit() {
-
+    this.
   }
 }
